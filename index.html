@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[#F5FFF6] font-sans">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <img src="/assets/logo.png" class="w-8 h-8 rounded-full" />
+      <span class="font-semibold text-lg text-[#1E293B]">Emergency Service</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-1 text-gray-700">
+        <!-- <i class='bx bx-heart text-red-500 text-xl'></i> -->
+        <span id="heartCount" class="font-bold">0</span>
+        <img src="/assets/heart.png" class="w-5 h-5 rounded-full" />
+      </div>
+      <div class="flex items-center gap-1 text-gray-700">
+        <!-- <i class='bx bx-coin-stack text-yellow-500 text-xl'></i> -->
+        <span id="coinCount" class="font-bold">100</span>
+        <img src="/assets/coin.png" alt="coin image" class="h-5 w-5">
+      </div>
+      <div class="flex items-center gap-1 text-gray-700 bg-green-500 text-white px-3 py-1 rounded-full">
+        <span id="copyCount">0</span> Copy
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg text-center py-10 text-white">
+    <div class="flex justify-center mb-4">
+      <img src="/assets/logo-dark.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
+    <p class="text-sm mt-2">Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of Bangladesh</p>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <!-- Hotline Cards -->
+    <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="cardContainer">
+      <!-- Cards dynamically injected -->
+    </div>
+
+    <!-- Call History -->
+    <aside class="bg-white shadow rounded-2xl p-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="font-semibold flex items-center gap-2"><i class='bx bx-time-five'></i> Call History</h2>
+        <button onclick="clearHistory()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded-full text-sm">Clear</button>
+      </div>
+      <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
+    </aside>
+  </main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
